@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Afiva Nurkamila</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background: linear-gradient(to right, rgba(225, 225, 225, 0.7), rgba(205, 206, 207, 0.7)), url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    
+    h2 {
+        text-align: center;
+        font-family: 'Cambria', cursive;
+        font-size: 2.5em;
+        color: #444;
+        margin-top: 20px;
+    }
+
+    h3 {
+        text-align: left;
+        font-family: 'Cambria', cursive;
+        font-size: 2em;
+        color: #b0adad;
+        margin-top: 30px;
+    }
+    
+    #collections {
+        padding: 20px;
+    }
+    nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            animation: fadeIn 1.5s;
+            border-radius: 5px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        margin: 20px auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        animation: fadeIn 2s;
+    }
+    
+    .photo {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .photo img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+    
+    .photo:hover img {
+        transform: scale(1.1);
+    }
+    
+    footer {
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    footer p {
+        margin: 5px 0;
+    }
+    
+    footer p small {
+        color: #bbb;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 2em;
+        }
+    
+        .gallery {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.5em;
+        }
+    
+        .gallery {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+    }
+    </style>
+</body>
+<nav>
+    <ul>
+        <li><a href="index.html" target="_blank">Home</a></li>
+        <li><a href="colection.html" target="_blank">Collections</a></li>
+        <li><a href="about.html"target="_blank">Review</a></li>
+        <li><a href="contact.html"target="_blank">Contact</a></li>
+    </ul>
+</nav>
+    <section id="collections">
+        <h2>COLLECTION</h2>
+        <h3>Beautiful Woman</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/e5/c3/7f/e5c37fee331ad695611e0b34cb9d0be3.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/dc/80/6d/dc806dbb72722ffe7b2b86def764546d.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/cc/54/47/cc5447eb34e6523dece950a6e4858855.jpg" alt="Photo 3">
+            </div>
+        </div>
+
+        <h3>SM</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/f3/0b/2c/f30b2ca75bf1af01c1e7cc4c2ff6cad9.jpg" alt="Photo 1.11">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/cd/0d/40/cd0d4071a20d9f60e7c8c93fd100a2c5.jpg" alt="Photo 2.22">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/8f/d4/c9/8fd4c93421340e8f057098499bb3cc49.jpg" alt="Photo 3.33">
+            </div>
+        </div>
+
+        <h3>SM (fight)</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/59/9e/80/599e803e1327dd0c135decd1fdff42bc.jpg" alt="Photo 1.1">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/a5/2c/95/a52c959f9cd9343f4b97c83a0e3e1566.jpg" alt="Photo 2.2">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/74/4e/a3/744ea31f6c050760aef9a1c9b7c17c3a.jpg" alt="Photo 3.3">
+            </div>
+        </div>
+
+        <h3>SM (family)</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/ad/9d/f9/ad9df91edf906d78f6f061a41beb2ed2.jpg" alt="Photo 11.1">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/da/9f/d0/da9fd0b52bf7d45592c1312d53d8bcf9.jpg" alt="Photo 22.2">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/1f/7f/65/1f7f6504f1a5d85ad67c034786a899ed.jpg" alt="Photo 33.3">
+            </div><div class="photo">
+                <img src="https://i.pinimg.com/474x/1c/25/da/1c25da4c3213b5e7e627bd947de220e9.jpg" alt="Photo 43.3">
+            </div>
+        </div>       
+
+        <h3>SM (family)</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/25/c5/fc/25c5fc08ec590b224fb634d660823185.jpg" alt="Photo 111.1">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/1b/e6/52/1be6523ebaf31401360979bc08f682e1.jpg" alt="Photo 222.2">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/b3/69/21/b36921f31192b25cc665ef305a6950d1.jpg" alt="Photo 333.3">
+            </div><div class="photo">
+                <img src="https://i.pinimg.com/474x/ab/21/2b/ab212b88964d3a4636e15a3c401814ca.jpg" alt="Photo 443.3">
+            </div>
+        </div>
+
+        <h3>Independence Day</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/d8/a3/bc/d8a3bcd547d690eef278bcc73ff5ccf4.jpg" alt="Photo 1.111">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/bf/a9/7e/bfa97ef9600939f14c0e661cb60763b3.jpg" alt="Photo 2.222">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/ac/fa/e5/acfae5a179bef3a6acf370e3e6cc605d.jpg" alt="Photo 3.333">
+            </div>
+        </div>
+
+        <h3>Siluet</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/a2/59/2f/a2592f1b70e193d6e758f8f3f7bce5c0.jpg" alt="Photo 1.112">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/ac/17/31/ac173114f326d518247a3bb2937e4ddb.jpg" alt="Photo 2.223">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/93/2e/10/932e101675359e8659703748072c6e55.jpg" alt="Photo 3.334">
+            </div>
+        </div>
+
+        <h3>Building</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/80/f7/4e/80f74e1e8985f2f9deff8b094c81fd80.jpg" alt="Photo 11.112">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/9d/5b/72/9d5b7287eeca54aa92bf3f016c7f1a50.jpg" alt="Photo 22.223">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/93/92/fb/9392fb45820a2f7074334a0ee67dd22d.jpg" alt="Photo 33.334">
+            </div>
+        </div>
+
+        <h3>Vehicle</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/ec/21/70/ec2170e631432c87da7b99d9ee22f983.jpg" alt="aerox">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/e9/47/3c/e9473c7a09a2ec779a456b256c1b4cc6.jpg" alt="car">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/ae/6c/ac/ae6cac1d4e363cdf5d77dd0bd426b9ae.jpg" alt="mini cooper">
+            </div>
+        </div>
+
+        <h3>Animal</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/1f/1d/66/1f1d665bb599c487058a8f0c8a3eedb5.jpg" alt="burung">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/53/d0/ba/53d0ba9cc97d164c1b828fff235d2298.jpg" alt="rusa">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/a6/ee/ce/a6eeceba5d53baebd8fb7a0c83721672.jpg" alt="kucing">
+            </div>
+        </div>
+
+        <h3>Food (fried noodle) </h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/1b/dd/0a/1bdd0a2f47a22b8ad77c5a556b690c34.jpg" alt="Photo 4">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/e1/37/32/e13732944184d0ed9b5b3a6caa342b76.jpg" alt="Photo 5">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/82/f3/b8/82f3b831a747414041a67a8b841ca3af.jpg" alt="Photo 6">
+            </div>
+        </div>
+
+        <h3>Food (boiled noodle)</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/51/64/5f/51645fb7208a75d7fc2f3b4d1225970a.jpg" alt="Photo 7">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/ee/ce/93/eece9302b6bd0aa437a89dce9f782b74.jpg" alt="Photo 8">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/54/e6/1b/54e61bbf18eb77de9bc357fd5548e2e2.jpg" alt="Photo 9">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/78/fd/f2/78fdf293b097a6038e91c055c0283b23.jpg" alt="Photo 9.1">
+            </div>
+        </div>
+
+        <h3>Food (Chicken)</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/13/51/46/135146ee269e085907597cb25ad76c6f.jpg" alt="Photo 10">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/2e/a4/5e/2ea45e888fa1b93f921f204c950cb1a2.jpg" alt="Photo 11">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/15/b5/b6/15b5b624084ebda7bd93fd3dd73f345b.jpg" alt="Photo 12">
+            </div>
+        </div>
+
+         <h3>Food (fried)</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/98/19/de/9819dee5456253baa4dd226aa468d00c.jpg" alt="Photo 13">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/c9/c6/d8/c9c6d8acb60c7313a919e14f2551d60a.jpg" alt="Photo 14">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/2a/95/af/2a95af1f2ef96e59dc17d457b68270d3.jpg" alt="Photo 15">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/f1/24/24/f12424dee8b63a40d4c42f74328f28b5.jpg" alt="Photo 16">
+            </div>
+        </div>
+
+        <h3>Junk Food</h3>
+        <div class="gallery">
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/cd/a4/da/cda4da59805f5c3bcf5e0a77562296e7.jpg" alt="Photo 17">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/cc/80/3d/cc803d636e87f933ce50a8ee34b006bf.jpg" alt="Photo 18">
+            </div>
+            <div class="photo">
+                <img src="https://i.pinimg.com/474x/7b/6d/56/7b6d56b1bba9e890f83f1e53c19c392f.jpg" alt="Photo 18">
+            </div>
+        </div>
+    </section>
+    
+        <footer>
+            <p>Created by: Afiva Nurkamila</p>
+            <p><small>© 2024, Gallery ANUKA</small></p>
+        </footer>
+    </body>
+    </html>
+

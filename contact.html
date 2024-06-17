@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Afiva Nurkamila</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Cambria', cursive;
+    font-size: 2.5em;
+    color: #444;
+    margin-top: 20px;
+}
+
+#collections {
+    padding: 20px;
+}
+nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #333;
+        animation: fadeIn 1.5s;
+        border-radius: 5px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+    }
+
+    nav ul li a:hover {
+        background-color: #575757;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+    }
+
+#contact {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 50px;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+    font-family: Cambria;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact li a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact li a:hover {
+    color: #0056b3;
+}
+
+#contact ul li::before {
+    content: '📍';
+    color: #007BFF;
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+#contact ul li:nth-child(4)::before {
+    content: '📞';
+}
+
+#contact ul li:nth-child(5)::before {
+    content: '🌍';
+}
+
+#contact ul li a[href^="mailto:"]::before {
+    content: '✉️';
+}
+
+#contact ul li a[href^="https://wa.me/"]::before {
+    content: '💬';
+}
+
+#contact ul li a[href^="https://instagram.com/"]::before {
+    content: '📷';
+}
+footer {
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    footer p {
+        margin: 5px 0;
+    }
+    
+    footer p small {
+        color: #bbb;
+    }
+
+@media (max-width: 600px) {
+    #contact {
+        padding: 20px;
+    }
+
+    #contact h2 {
+        font-size: 2em;
+    }
+
+    #contact p, #contact li {
+        font-size: 1em;
+    }
+}
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="colection.html" target="_blank">Collections</a></li>
+            <li><a href="about.html"target="_blank">Review</a></li>
+            <li><a href="contact.html"target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Ingin tahu lebih banyak tentang saya atau tertarik untuk berkolaborasi?</p>
+    <p>Hubungi saya melalui:</p>
+    <ul>
+        <li><a href="https://wa.me/088269725416" target="_blank">WhatsApp: Klik di sini</a></li>
+        <li><a href="https://instagram.com/fivaaviii_" target="_blank">Instagram: @fivaaviii_</a></li>
+        <li><a href="mailto:afivanurkamila19@gmail.com">Email: afivanurkamila19@gmail.com</a></li>
+        <li>Telepon: 088269725416</li>
+        <li>Palembang, Indonesia</li>
+    </ul>
+    <p>Temukan Inspirasi Lainnya!</p>
+    <p>Dapatkan lebih banyak inspirasi dengan mengunjungi akun PINTEREST saya! Ada banyak referensi foto menarik yang bisa Anda lihat.</p>
+    <p><a href="https://pin.it/1xRyH7U" target="_blank">Klik di sini untuk mengunjungi!</a></p>
+</section>
+
+<footer>
+    <p>Created by: Afiva Nurkamila</p>
+    <p><small>© 2024, Gallery ANUKA</small></p>
+</footer>
+
+<script src="contact.html"></script>
+</body>
+</html>

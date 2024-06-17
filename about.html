@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Afiva Nurkamila</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background: linear-gradient(to right, rgba(225, 225, 225, 0.7), rgba(205, 206, 207, 0.7)), url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            animation: fadeIn 1.5s;
+            border-radius: 5px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        /* Header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        /* Main Sections */
+        .main {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .home,
+        .favorite,
+        .care,
+        .banner,
+        .products,
+        .contact {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home h2,
+        .favorite h2,
+        .care h2,
+        .products h2,
+        .contact h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .home p,
+        .favorite p,
+        .care p,
+        .products p,
+        .contact p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 2;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer p small {
+            color: #bbb;
+        }
+
+        /* Scroll Up Button */
+        #scroll-up {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .today {
+            background-color: yellow;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .home h2,
+            .favorite h2,
+            .care h2,
+            .products h2,
+            .contact h2 {
+                font-size: 1.5em;
+            }
+
+            .home p,
+            .favorite p,
+            .care p,
+            .products p,
+            .contact p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .home h2,
+            .favorite h2,
+            .care h2,
+            .products h2,
+            .contact h2 {
+                font-size: 1.2em;
+            }
+
+            .home p,
+            .favorite p,
+            .care p,
+            .products p,
+            .contact p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="colection.html" target="_blank">Collections</a></li>
+            <li><a href="about.html"target="_blank">Review</a></li>
+            <li><a href="contact.html"target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <div class="container">
+            <h1>About</h1>
+            <p>- What You Like -</p>
+        </div>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="container">
+                <h2>You!</h2>
+                <p>Please fill in here:</p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="age">Age:</label>
+                <select id="age" name="age">
+                    <option value="-15">-15</option>
+                    <option value="16-25">16-25</option>
+                    <option value="26-40">26-40</option>
+                    <option value="41+">41+</option>
+                </select>
+            </div>
+        </section>
+
+        <!--==================== FAVORITES ====================-->
+        <section class="favorite section" id="favorites">
+            <div class="container">
+                <h2>Favorite Photography</h2>
+                <p>Choose a few.</p>
+                <label><input type="checkbox" name="favourite" value="Portrait"> Portrait</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Landscape"> Landscape</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Macro"> Macro</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Street"> Street</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Fashion"> Fashion</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Culinary"> Culinary</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Travel"> Travel</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Still Life"> Still Life</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Journalism"> Journalism</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Architectural"> Architectural</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Sports"> Sports</label>
+                <br>
+                <label><input type="checkbox" name="favourite" value="Stage"> Stage</label>
+                <br>
+                <p>etc.</p>
+            </div>
+        </section>
+
+        <!--==================== GENDER ====================-->
+        <section class="care section" id="care">
+            <div class="container">
+                <h2>Gender</h2>
+                <form id="myForm">
+                    <input type="radio" name="gender" value="Man" checked /> Man<br/>
+                    <input type="radio" name="gender" value="Woman" /> Woman<br/>
+                </form>
+                <br>
+                <button type="button" onclick="showOutput()">Confirm</button>
+                
+                <p id="output"></p>
+                
+                <script>
+                    function showOutput() {
+                        // Ambil nilai dari radio button yang terpilih
+                        const gender = document.querySelector('input[name="gender"]:checked').value;
+                
+                        // Tampilkan hasilnya
+                        document.getElementById('output').textContent = `Selected gender: ${gender}`;
+                    }
+                </script>
+            </div>
+        </section>
+
+        <!--==================== OPINION ====================-->
+        <section class="banner">
+            <div class="container">
+                <h2>What do you think?</h2>
+                <p>Give your opinion about this page.</p>
+                <select id="opinion" name="opinion">
+                    <option value="Bad">Bad</option>
+                    <option value="Good">Good</option>
+                    <option value="Very Good">Very Good</option>
+                </select>
+            </div>
+        </section>
+        
+        <br>
+        <form>
+            <p>Comment.</p>
+            <textarea id="comment" rows="5" cols="94"></textarea>
+            <br>
+            <input type="button" value="Send" onclick="sendData()" />
+        </form>
+    
+        <h1>Calendar</h1>
+        <table id="calendar"></table>
+    
+        <script>
+            function generateCalendar(year, month) {
+                const calendar = document.getElementById('calendar');
+                calendar.innerHTML = '';
+    
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    
+                // Create header
+                const headerRow = document.createElement('tr');
+                const header = document.createElement('th');
+                header.colSpan = 7;
+                header.innerText = `${monthNames[month]} ${year}`;
+                headerRow.appendChild(header);
+                calendar.appendChild(headerRow);
+    
+                // Create days of the week row
+                const daysRow = document.createElement('tr');
+                for (const day of daysOfWeek) {
+                    const th = document.createElement('th');
+                    th.innerText = day;
+                    daysRow.appendChild(th);
+                }
+                calendar.appendChild(daysRow);
+    
+                // Create days
+                const firstDay = new Date(year, month, 1).getDay();
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+    
+                let date = 1;
+                const today = new Date();
+                const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
+    
+                for (let i = 0; i < 6; i++) {
+                    const row = document.createElement('tr');
+    
+                    for (let j = 0; j < 7; j++) {
+                        const cell = document.createElement('td');
+                        if (i === 0 && j < firstDay) {
+                            cell.innerText = '';
+                        } else if (date > daysInMonth) {
+                            cell.innerText = '';
+                        } else {
+                            cell.innerText = date;
+                            if (isCurrentMonth && date === today.getDate()) {
+                                cell.classList.add('today');
+                            }
+                            date++;
+                        }
+                        row.appendChild(cell);
+                    }
+                    calendar.appendChild(row);
+                    if (date > daysInMonth) {
+                        break;
+                    }
+                }
+            }
+    
+            const today = new Date();
+            generateCalendar(today.getFullYear(), today.getMonth());
+    
+            function sendData() {
+                const name = document.getElementById('name').value;
+                const age = document.getElementById('age').value;
+                const favourites = Array.from(document.querySelectorAll('input[name="favourite"]:checked')).map(cb => cb.value);
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+                const opinion = document.getElementById('opinion').value;
+                const comment = document.getElementById('comment').value;
+    
+                const data = {
+                    name,
+                    age,
+                    favourites,
+                    gender,
+                    opinion,
+                    comment
+                };
+    
+                // Simpan data di localStorage
+                localStorage.setItem('formData', JSON.stringify(data));
+    
+                // Buka halaman baru
+                window.open('result.html', '_blank');
+            }
+        </script>
+
+    </main>
+
+    <!--========== SCROLL UP ==========-->
+    <div id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </div>
+
+    <footer>
+        <p>Created by: Afiva Nurkamila</p>
+        <p><small>© 2024, Gallery ANUKA</small></p>
+    </footer>
+
+    <script src="about.html"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Afiva Nurkamila</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background: linear-gradient(to right, rgba(161, 166, 170, 0.7), rgba(205, 206, 207, 0.7)), url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        header, nav, main, footer {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5em;
+            animation: fadeInDown 1s;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            animation: fadeIn 1.5s;
+            border-radius: 5px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeIn 2s;
+        }
+
+        .photo {
+            width: 500px;
+            height: 250px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .photo p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            width: 1150px;;
+            margin-top: 20px;
+            animation: fadeInUp 1s;
+            border-radius: 3px;
+        }
+    
+    
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer p small {
+            color: #bbb;
+        }
+
+        
+    </style>
+<body>
+    <header>
+        <h1>GALLERY ANUKA</h1>
+        <p><i>Discover and Share Amazing Photos</i></p>
+        <hr>
+    </header>
+    <nav>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="colection.html" target="_blank">Collections</a></li>
+                <li><a href="about.html"target="_blank">Review</a></li>
+                <li><a href="contact.html"target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+
+    <main>
+        <section id="home">
+            <h2>ANUKA PICTURE</h2>
+            <div class="gallery">
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/73/81/a0/7381a019e857457ddac138db6eefd1e5.jpg" alt="Sample Photo 1">
+                    <p style="font-size: small;">original picture by:<sub>pinterest</sub></p>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+<footer>
+    <p>Created by: Afiva Nurkamila</p>
+    <p><small>© 2024, Gallery ANUKA</small></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
